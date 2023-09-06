@@ -1,0 +1,46 @@
+platforms: &platforms
+  - linux/amd64
+  - linux/arm64
+
+test_config: &test_config
+  volume: php:/tmp
+  cmd:
+    - php --version
+    - composer --version
+    - modd --version
+    - php-cs-fixer --version
+    - security-checker -help
+    - php /tmp/test.php
+
+build_args: &build_args
+  APCU_VERSION: 5.1.22
+  COMPOSER_VERSION: 2.5.7
+  MEMCACHED_VERSION: 3.2.0
+  MODD_VERSION: *MODD_VERSION
+  PHP_CS_FIXER_VERSION: 3.17.0
+  REDIS_VERSION: 5.3.7
+  SECURITY_CHECKER_VERSION: 2.0.6
+  XDEBUG_VERSION: 3.2.1
+
+versions:
+  "8.0":
+    platforms: *platforms
+    build_args:
+      <<: *build_args
+      ICONV_VERSION: 1.15-r3
+      MUSL_VERSION: 1.2.3-r3
+    test_config: *test_config
+  "8.1":
+    platforms: *platforms
+    build_args:
+      <<: *build_args
+      ICONV_VERSION: 1.17-r1
+      MUSL_VERSION: 1.2.4-r1
+    test_config: *test_config
+  "8.2":
+    platforms: *platforms
+    build_args:
+      <<: *build_args
+      ICONV_VERSION: 1.17-r1
+      MUSL_VERSION: 1.2.4-r1
+    test_config: *test_config

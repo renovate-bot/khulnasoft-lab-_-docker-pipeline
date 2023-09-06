@@ -1,0 +1,5 @@
+*/build.log
+.idea
+*.iml
+.vscode
+src/__pycache__/*

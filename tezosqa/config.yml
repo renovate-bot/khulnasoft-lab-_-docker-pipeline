@@ -1,0 +1,10 @@
+versions:
+  "2.0":
+    platforms: 
+      - linux/amd64
+      - linux/arm64
+    test_config:
+      cmd:
+        - ligo --version
+        - pytezos --version
+

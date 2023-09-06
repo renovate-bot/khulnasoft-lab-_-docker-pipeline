@@ -1,0 +1,19 @@
+test_config: &test_config
+  cmd:
+    - java -version
+    - aws --version
+    - dot -V
+    - jq --version
+    - psql --version
+
+versions:
+  "11":
+    platforms:
+      - linux/amd64
+      - linux/arm64
+    test_config: *test_config
+  "17":
+    platforms: 
+      - linux/amd64
+      - linux/arm64
+    test_config: *test_config

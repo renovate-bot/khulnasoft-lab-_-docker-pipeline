@@ -1,0 +1,26 @@
+versions:
+  "2":
+    platforms:
+      - linux/amd64
+      - linux/arm64
+    build_args:
+      HELM_DIFF_VERSION: 3.6.0
+      HELM_VERSION: 3.11.2
+      KUBECTL_VERSION: 1.26.3
+      KUSTOMIZATION_VERSION: 5.0.1
+      TRIVY_VERSION: "0.38.3"
+      TERRAGRUNT_VERSION: "0.45.0"
+      INFRACOST_VERSION: "0.10.19"
+    test_config:
+      cmd:
+        - az --version
+        - git --version
+        - helm diff version
+        - helm version
+        - kustomize version
+        - pip --version
+        - pipenv --version
+        - trivy --version
+        - terragrunt --version
+        - infracost --version
+        - tfenv init

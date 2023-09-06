@@ -1,0 +1,44 @@
+test_config: &test_config
+  cmd:
+    - node --version
+    - npm --version
+    - aws --version
+    - yarn --version
+    - sass --version
+    - modd --version
+    - task --version
+
+versions:
+  "14":
+    platforms:
+      - linux/amd64
+      - linux/arm64
+    build_args:
+      NODE_VERSION: 14.17.6
+      NPM_VERSION: 6.14.5
+      NVM_VERSION: 0.35.3
+      MODD_VERSION: *MODD_VERSION
+      TASKFILE_VERSION: *TASKFILE_VERSION
+    test_config: *test_config
+  "16":
+    platforms: 
+      - linux/amd64
+      - linux/arm64
+    build_args:
+      NODE_VERSION: 16.11.0
+      NPM_VERSION: 8.0.0
+      NVM_VERSION: 0.39.0
+      MODD_VERSION: *MODD_VERSION
+      TASKFILE_VERSION: *TASKFILE_VERSION
+    test_config: *test_config
+  "18":
+    platforms: 
+      - linux/amd64
+      - linux/arm64
+    build_args:
+      NODE_VERSION: 18.2.0
+      NPM_VERSION: 8.0.0
+      NVM_VERSION: 0.39.0
+      MODD_VERSION: *MODD_VERSION
+      TASKFILE_VERSION: *TASKFILE_VERSION
+    test_config: *test_config
