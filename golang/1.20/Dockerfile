@@ -1,4 +1,4 @@
-FROM golang:1.21.4 as base
+FROM golang:1.21.6 as base
 LABEL maintainer="opensource@khulnasoft.com"
 ARG GITLEAKS_VERSION
 ARG GOLANGCILINT_VERSION
