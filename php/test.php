@@ -3,7 +3,7 @@
 /**
  * Logs using the given streams.
  *
- * @author Rémi Marseille <marseille@khulnasoft.com>
+ * @author KhulnaSoft DevOps <security@khulnasoft.com>
  */
 class Logger
 {
@@ -46,7 +46,7 @@ class Logger
 /**
  * Checks the PHP installation.
  *
- * @author Rémi Marseille <marseille@khulnasoft.com>
+ * @author KhulnaSoft DevOps <security@khulnasoft.com>
  */
 class Checker
 {

@@ -1,4 +1,4 @@
-FROM php:8.2.18-cli-alpine3.18 AS base
+FROM php:8.3.6-cli-alpine3.18 AS base
 LABEL maintainer="KhulnaSoft DevOps <security@khulnasoft.com>"
 
 ARG APCU_VERSION
@@ -29,7 +29,6 @@ ENV COMPOSER_NO_INTERACTION=1 \
     TERM=xterm \
     LD_PRELOAD="/usr/lib/preloadable_libiconv.so php" \
     PHP_CPPFLAGS="$PHP_CPPFLAGS -std=c++11"
-
 
 RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") && \
     apk add --update --upgrade alpine-sdk apk-tools autoconf bash bzip2 cyrus-sasl-dev curl freetype-dev gettext git \

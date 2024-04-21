@@ -1,4 +1,5 @@
-FROM eclipse-temurin:11.0.22_7-jdk-jammy as base
+FROM eclipse-temurin:21.0.2_13-jdk-jammy as base
+
 LABEL maintainer="security@khulnasoft.com"
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8
@@ -15,23 +16,23 @@ FROM base-${TARGETARCH}
 RUN cat /etc/apt/sources.list && \
     apt-get -qq clean -qq && apt-get -qq update && \
 
-# Install base
+    # Install base
     apt-get -qq -y install build-essential curl git make openssh-client jq unzip groff less && \
 
-# Installing AWS CLIv2
+    # Installing AWS CLIv2
     curl https://awscli.amazonaws.com/awscli-exe-${AWSCLI_ARCH}.zip -o awscliv2.zip && \
     unzip -q awscliv2.zip && \
     ./aws/install && \
     rm -f awscliv2.zip && \
     rm -rf aws && \
 
-# Install graphviz
+    # Install graphviz
     apt-get -qq -y install graphviz && \
 
-# Install postgresql-client
+    # Install postgresql-client
     apt-get -qq -y install postgresql-client && \
 
-# Cleaning files!
+    # Cleaning files!
     rm -rf /tmp/* && \
     apt-get -y remove --purge dpkg-dev fakeroot file manpages manpages-dev patch xauth xz-utils && \
     apt-get -qq -y autoremove && \

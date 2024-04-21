@@ -1,6 +1,45 @@
 Versions
 ========
 
+2024-02-29
+----------
+* Golang : adding 1.22, dropping 1.20
+
+2024-01-31
+----------
+* Golang : removing go-bindata. Bumping misc tools' versions.
+* Node : bumping minor versions
+* Platform: bumping CLI to 5.x.x
+
+2023-12-31
+----------
+* Node : dropping EoL Node 16 support
+* PHP : adding 8.3 image, dropping 8.0
+
+2023-11-30
+----------
+* AWS : bumping Kubectl version
+* Azure : bumping Kubectl version
+* Tezosqa : fix pytezos installation error
+
+2023-10-31
+----------
+* AWS : bumping Trivy version. Bumping kubernetes tooling versions.
+* AWSLinux-systemd : dropping support of this image
+* Azure : bumping Trivy version. Bumping kubernetes tooling versions.
+* Cloudsploit : bumping to 3.1.0. Also bumping node to 20
+* Dind : bumping Trivy version
+* Golang : adding 1.21 support
+* Java : adding Java 21 support
+* Python : adding 3.12 support
+* Sonar : bumping CLI from 4.7 to 5.0
+
+2023-09-30
+----------
+* Node: dropping support for 14.x (EOL), adding 20.x. Bumping minor versions
+* Python : build arm64 docker image
+* Python : adding poetry
+
 2023-08-31
 ----------
 * Cloudsploit : bumping to 3.0.0

@@ -1,5 +1,5 @@
 FROM docker:20.10.24-dind as base
-LABEL maintainer="Rémi Marseille <marseille@khulnasoft.com>"
+LABEL maintainer="KhulnaSoft DevOps <security@khulnasoft.com>"
 ARG GLIBC_VERSION
 ARG TASKFILE_VERSION
 ARG TRIVY_VERSION
@@ -21,12 +21,12 @@ RUN echo "Install AWS & Azure CLIs" && \
     apk add --update -q --force-overwrite glibc-${GLIBC_VERSION}.apk glibc-bin-${GLIBC_VERSION}.apk && \
     rm /etc/apk/keys/sgerrand.rsa.pub glibc-${GLIBC_VERSION}.apk glibc-bin-${GLIBC_VERSION}.apk && \
     curl https://awscli.amazonaws.com/awscli-exe-${AWSCLI_ARCH}.zip -o awscliv2.zip && \
-    unzip awscliv2.zip && \
+    unzip -q awscliv2.zip && \
     ./aws/install && \
     rm -f awscliv2.zip && rm -rf aws && \
     echo "Done installing AWS & Azure CLIs"
 
-FROM python:3.12-alpine@sha256:a5d1738d6abbdff3e81c10b7f86923ebcb340ca536e21e8c5ee7d938d263dba1 AS aws-builder
+FROM python:3.11-alpine@sha256:4e8e9a59bf1b3ca8e030244bc5f801f23e41e37971907371da21191312087a07 AS aws-builder
 ARG AWSCLI_VERSION=2.11.18
 RUN apk add --no-cache curl make cmake gcc g++ libc-dev libffi-dev openssl-dev && \
     pip3 install --no-cache --upgrade pip setuptools wheel

@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/khulnasoft/docker-pipeline/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/khulnasoft/docker-pipeline/actions?query=branch%3Amaster)
+[![Build Status](https://github.com/khulnasoft-lab/docker-pipeline/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/khulnasoft-lab/docker-pipeline/actions?query=branch%3Amaster)
 
 # BuildBox
 
@@ -83,11 +83,6 @@ Do not forget to add an entry in `.github/dependabot.yml` too if you want it to 
 https://hub.docker.com/r/khulnasoft/ci-aws/tags
 
 Contains AWS Cli, Terraform, Kubectl, Helm, Python & misc tools
-
-### AWSLinux systemd
-https://hub.docker.com/r/khulnasoft/ci-awslnx-systemd/tags
-
-Amazon Linux based image containing Systemd for service management in docker container.
 
 ### Azure
 https://hub.docker.com/r/khulnasoft/ci-azure/tags
