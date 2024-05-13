@@ -1,4 +1,4 @@
-FROM php:8.2.18-cli-alpine3.18 AS base
+FROM php:8.2.19-cli-alpine3.18 AS base
 LABEL maintainer="KhulnaSoft DevOps <security@khulnasoft.com>"
 
 ARG APCU_VERSION
