@@ -1,4 +1,4 @@
-FROM golang:1.21.11 as base
+FROM golang:1.21.12 as base
 LABEL maintainer="security@khulnasoft.com"
 ARG GITLEAKS_VERSION
 ARG GOLANGCILINT_VERSION
