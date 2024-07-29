@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21.0.3_9-jdk-jammy as base
+FROM eclipse-temurin:21.0.4_7-jdk-jammy as base
 
 LABEL maintainer="security@khulnasoft.com"
 ENV DEBIAN_FRONTEND=noninteractive \
