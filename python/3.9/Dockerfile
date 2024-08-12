@@ -1,4 +1,4 @@
-FROM python:3.12.3-slim-bullseye
+FROM python:3.12.5-slim-bullseye
 
 ARG TARGETARCH
 ARG POETRY_VERSION
