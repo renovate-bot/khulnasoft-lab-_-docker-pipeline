@@ -1,4 +1,4 @@
-FROM python:3.12.7-slim-bullseye as base
+FROM python:3.13.3-slim-bullseye as base
 
 LABEL maintainer="security@khulnasoft.com"
 
