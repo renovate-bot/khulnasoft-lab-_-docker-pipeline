@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:24-alpine
 LABEL maintainer="security@khulnasoft.com"
 
 ARG MODD_VERSION

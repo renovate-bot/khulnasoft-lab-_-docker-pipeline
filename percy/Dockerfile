@@ -1,4 +1,4 @@
-FROM node:17-slim AS base
+FROM node:24-slim AS base
 RUN apt-get update && \
     apt-get install -y wget gnupg build-essential python3 && \
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
