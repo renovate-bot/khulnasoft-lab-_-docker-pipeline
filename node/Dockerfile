@@ -1,4 +1,4 @@
-FROM debian:12.6-slim as base
+FROM debian:12.10-slim as base
 LABEL maintainer="opensource@khulnasoft.com"
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
