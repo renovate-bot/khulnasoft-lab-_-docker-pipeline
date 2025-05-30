@@ -1,4 +1,4 @@
-FROM docker:28.1.1-dind as base
+FROM docker:28.2.2-dind as base
 LABEL maintainer="KhulnaSoft DevOps <security@khulnasoft.com>"
 ARG GLIBC_VERSION
 ARG TASKFILE_VERSION
