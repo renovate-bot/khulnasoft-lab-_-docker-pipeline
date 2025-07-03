@@ -1,4 +1,4 @@
-FROM docker:28.1.1-dind
+FROM docker:28.3.1-dind
 
 WORKDIR /tezos
 
